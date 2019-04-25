@@ -11,8 +11,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-*.lock
-*-lock
+
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
