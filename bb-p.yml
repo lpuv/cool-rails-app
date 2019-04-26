@@ -1,0 +1,47 @@
+# This is a sample build configuration for Ruby.
+# Check our guides at https://confluence.atlassian.com/x/8r-5Mw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: ruby:2.6.1
+
+pipelines:
+  default:
+
+  - step:
+        name: Install and test
+        caches:
+          - bundler
+        script: # Modify the commands below to build your repository.
+          - gem update --system
+          - gem uninstall bundler
+          - gem install bundler
+          - rm -rf Gemfile.lock
+          - bundle update
+          - bundle install
+          - rails t
+          
+  - step:
+        name: Prepare for deploy
+        script:
+          - mkdir releases
+          - tar --exclude './releases' -zcvf releases/release.tar.gz .
+
+          - pipe: atlassian/heroku-deploy:0.1.1
+            variables:
+                        HEROKU_API_KEY: 'c81dbefb-6099-49b8-afd1-2d08aed82ea5'
+                        HEROKU_APP_NAME: 'cool-rails-app'
+                        ZIP_FILE: 'releases/release.tar.gz'
+                        # WAIT: '<boolean>' # Optional.
+                        # DEBUG: '<boolean>' # Optional
+
+
+
+
+
+
+
+
+definitions:
+  caches:
+    bundler: ./vendor
