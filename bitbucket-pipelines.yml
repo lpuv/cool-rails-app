@@ -9,6 +9,7 @@ pipelines:
   default:
 
   - step:
+        name: Install and test
         caches:
           - bundler
         script: # Modify the commands below to build your repository.
@@ -19,9 +20,12 @@ pipelines:
           - bundle update
           - bundle install
           - rails t
+          
+  - step:
+        name: Prepare for deploy
+        script:
           - mkdir releases
           - tar --exclude './releases' -zcvf releases/release.tar.gz .
-
 
           - pipe: atlassian/heroku-deploy:0.1.1
             variables:
