@@ -9,6 +9,9 @@ gem 'rails', '~> 5.2.3'
 gem 'therubyracer'
 gem 'execjs'
 
+gem 'guard'
+gem 'guard-minitest'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
