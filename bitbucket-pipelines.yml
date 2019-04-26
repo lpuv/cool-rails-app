@@ -19,14 +19,15 @@ pipelines:
           - bundle update
           - bundle install
           - rails t
-          - tar --exclude='./test' --exclude='./tmp' -zcvf release.tar.gz .
+          - mkdir releases
+          - tar -zcvf releases/release.tar.gz .
 
 
           - pipe: atlassian/heroku-deploy:0.1.1
             variables:
                         HEROKU_API_KEY: 'c81dbefb-6099-49b8-afd1-2d08aed82ea5'
                         HEROKU_APP_NAME: 'cool-rails-app'
-                        ZIP_FILE: 'release.tar.gz'
+                        ZIP_FILE: 'releases/release.tar.gz'
                         # WAIT: '<boolean>' # Optional.
                         # DEBUG: '<boolean>' # Optional
 
