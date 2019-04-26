@@ -18,7 +18,8 @@ pipelines:
           - rm -rf Gemfile.lock
           - bundle update
           - bundle install
-          - tar -zcvf release.tar.gz .
+          - rails t
+          - tar --exclude='./test' --exclude='./tmp' -zcvf release.tar.gz .
 
 
           - pipe: atlassian/heroku-deploy:0.1.1
