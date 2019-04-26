@@ -20,7 +20,7 @@ pipelines:
           - bundle install
           - rails t
           - mkdir releases
-          - tar -zcvf releases/release.tar.gz .
+          - tar --exclude './releases' -zcvf releases/release.tar.gz .
 
 
           - pipe: atlassian/heroku-deploy:0.1.1
