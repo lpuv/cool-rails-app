@@ -30,9 +30,7 @@ before_script:
 
 
 
-rspec:
-  script:
-  - rspec spec
+
 
 rails:
   script:
