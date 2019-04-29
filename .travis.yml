@@ -1,21 +1,15 @@
 language: ruby
 before_install:
-  - sudo apt-get update -q && sudo apt-get install nodejs -yqq
-  - sudo apt-get install libpq-dev -yqq
-  - gem update --system
-  - gem install bundler
-  - gem install rails
-  - rm -rf Gemfile.lock
-  - bundle update
-  - bundle install
-
-
-
+- sudo apt-get update -q && sudo apt-get install nodejs -yqq
+- sudo apt-get install libpq-dev -yqq
+- gem update --system
+- gem install bundler
+- gem install rails
+- rm -rf Gemfile.lock
+- bundle update
+- bundle install
 deploy:
   provider: heroku
   api_key:
-    secure: Hi1G2E72dolJWT+UTX4T5a1pdo36kCs3drm46vSs1/iCTSIDGyWRwZ1ufudFHL1Y/0LFV2+Jzlgi7xWDljRaG+xNd5k5u6m+p1mA5rZRigi9X1gxaj9nW/fAaF+RahWqaPzwfmP7SLevuxI7bY0Y00QOdEHa7w88WufaPpaaZbBFKimxuAaMOmXRH/KOw8SfYgY8KmWrsCxgQbe8LPknrOYBd5Jik7+DYG4ch2RYo+jaZEKlvfeHXfqr62lPd+TWNVit7pwsZVMAr5DzcPwsnacI5VdF/vIUlXpiqIaTQV6L5x1t05M1P5kAh4A9WfluxHxXoAnvZUW4jp1628M/Yg/CBN9El2/xMLEsauD/w5yokm0U2LAWMzwNBBoEXspP6444Zt66kqVT33XcEa1hIb0HqH0llilxOuxxJALVdn6/WOvFr/VFiETEzY42FENRCEx+YK55vPBHWn1MgL6UyqIsiu4m2ruImso1DyclYHDd8tNdK95sMVmS4V/BUodl/x2aNBwEv08ViLevAat1xO51fkgBJ2JaCwQdfuFL1V/Plyw9gmIG0WjZ1TN3AUfq/4x4qCTFT394Pcht6CHeuNyOF2OHSSHzbbD9RRVq+KNqiH7T3lCHBnb+4UDWnLhi4fEbnXg1fjKbIU5G8UwgQTBtLt5LvvYtz0O/acCvgF0=
+    secure: ApmAY8yuAJKIspkh2oHaYSvFx10GmCnqXE+bP+j7znw47C21H7FhQxE5o/+d1O0zBwm9wsaVsiDL5Lq8k8zIOtIZpQJtqdmH2hx1vI4rO6szFo0cy+hRUf3McpdO2ma76Ab6cCaxSaymRwyddxvotxDNrcTx1ywsYcvyU8m2wkRgiL2srVCJ0U2stTU3Sluv6C2DHLkJlp6j0cJvrUKoRvx+mT7OzdRk2dy9CETPpba+yIBTbb2JB/DhrQZFjHSpn8gtE19nLTfH+5lRK0R6+ex4J1kxGXUmfICSjabmgRZ54HLitLjVNYu4CpewALTZBzoYzIc8h2jgke/k9nhxHFPoorzbtc6Ww3VHRWIOnFDoHthE6V4Uf8Z+h8jh8qNJorPr4CXRrblN0tYQMETsjrYHlFcpYZYkjxowQeOya+GgNV5jm7mKYX+VHvyLFcLjInzGH48CiwK+isyCvO83NJLqd+CYGlizJVs0hSVPIy3FlXoxtfpM4Q8DOfL/Y7LR4XTJ2CDdmmFOSgxaICMvkd8xim7Ad3SrdixEwJZcLGRVQBvWr/TTtEItgr2tBQC0wMo/ocp1t74wq/+lkB0M1C40qmlfVwg35QVai54NAU5KUTemXgU40imd5NhWei0LluA4CGaoj7tVxzMjQN380oPsO/NxuxhhYkZ0liY+duw=
   app: cool-rails-app
-  on:
-    repo: gamer4life1/cool-rails-app
-
