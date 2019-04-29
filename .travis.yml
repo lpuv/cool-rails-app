@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: Hi1G2E72dolJWT+UTX4T5a1pdo36kCs3drm46vSs1/iCTSIDGyWRwZ1ufudFHL1Y/0LFV2+Jzlgi7xWDljRaG+xNd5k5u6m+p1mA5rZRigi9X1gxaj9nW/fAaF+RahWqaPzwfmP7SLevuxI7bY0Y00QOdEHa7w88WufaPpaaZbBFKimxuAaMOmXRH/KOw8SfYgY8KmWrsCxgQbe8LPknrOYBd5Jik7+DYG4ch2RYo+jaZEKlvfeHXfqr62lPd+TWNVit7pwsZVMAr5DzcPwsnacI5VdF/vIUlXpiqIaTQV6L5x1t05M1P5kAh4A9WfluxHxXoAnvZUW4jp1628M/Yg/CBN9El2/xMLEsauD/w5yokm0U2LAWMzwNBBoEXspP6444Zt66kqVT33XcEa1hIb0HqH0llilxOuxxJALVdn6/WOvFr/VFiETEzY42FENRCEx+YK55vPBHWn1MgL6UyqIsiu4m2ruImso1DyclYHDd8tNdK95sMVmS4V/BUodl/x2aNBwEv08ViLevAat1xO51fkgBJ2JaCwQdfuFL1V/Plyw9gmIG0WjZ1TN3AUfq/4x4qCTFT394Pcht6CHeuNyOF2OHSSHzbbD9RRVq+KNqiH7T3lCHBnb+4UDWnLhi4fEbnXg1fjKbIU5G8UwgQTBtLt5LvvYtz0O/acCvgF0=
+  app: cool-rails-app
+  on:
+    repo: gamer4life1/cool-rails-app
