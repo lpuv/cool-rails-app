@@ -8,3 +8,4 @@ before_install:
 - rm -rf Gemfile.lock
 - bundle update
 - bundle install
+- bundle exec rake
