@@ -10,6 +10,7 @@ before_install:
   - bundle install
 
 
+
 deploy:
   provider: heroku
   api_key:
@@ -17,3 +18,4 @@ deploy:
   app: cool-rails-app
   on:
     repo: gamer4life1/cool-rails-app
+
