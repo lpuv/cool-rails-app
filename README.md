@@ -1,5 +1,7 @@
 # Ruby on Rails Tutorial sample application
 
+[![Build Status](https://travis-ci.com/gamer4life1/cool-rails-app.svg?branch=master)](https://travis-ci.com/gamer4life1/cool-rails-app)
+
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
