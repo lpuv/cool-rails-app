@@ -8,8 +8,3 @@ before_install:
 - rm -rf Gemfile.lock
 - bundle update
 - bundle install
-deploy:
-  provider: heroku
-  api_key:
-    secure: ApmAY8yuAJKIspkh2oHaYSvFx10GmCnqXE+bP+j7znw47C21H7FhQxE5o/+d1O0zBwm9wsaVsiDL5Lq8k8zIOtIZpQJtqdmH2hx1vI4rO6szFo0cy+hRUf3McpdO2ma76Ab6cCaxSaymRwyddxvotxDNrcTx1ywsYcvyU8m2wkRgiL2srVCJ0U2stTU3Sluv6C2DHLkJlp6j0cJvrUKoRvx+mT7OzdRk2dy9CETPpba+yIBTbb2JB/DhrQZFjHSpn8gtE19nLTfH+5lRK0R6+ex4J1kxGXUmfICSjabmgRZ54HLitLjVNYu4CpewALTZBzoYzIc8h2jgke/k9nhxHFPoorzbtc6Ww3VHRWIOnFDoHthE6V4Uf8Z+h8jh8qNJorPr4CXRrblN0tYQMETsjrYHlFcpYZYkjxowQeOya+GgNV5jm7mKYX+VHvyLFcLjInzGH48CiwK+isyCvO83NJLqd+CYGlizJVs0hSVPIy3FlXoxtfpM4Q8DOfL/Y7LR4XTJ2CDdmmFOSgxaICMvkd8xim7Ad3SrdixEwJZcLGRVQBvWr/TTtEItgr2tBQC0wMo/ocp1t74wq/+lkB0M1C40qmlfVwg35QVai54NAU5KUTemXgU40imd5NhWei0LluA4CGaoj7tVxzMjQN380oPsO/NxuxhhYkZ0liY+duw=
-  app: cool-rails-app
