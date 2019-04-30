@@ -5,7 +5,7 @@ cache:
   paths:
   - vendor/ruby
 
-setup:
+setupenv:
   - ruby -v # Print out ruby version for debugging  
   # Uncomment next line if your rails app needs a JS runtime: 
   - apt-get update -q && apt-get install nodejs -yqq  
