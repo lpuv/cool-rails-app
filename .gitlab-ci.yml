@@ -1,5 +1,9 @@
 image: ruby:2.6.1
 
+stages:
+  - install
+  - test
+  - deploy
 
 cache:
   paths:
