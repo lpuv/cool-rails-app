@@ -17,17 +17,15 @@ before_script:
   - gem update --system 
   - gem install bundler
 
-install:
+install-test:
   script: 
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby 
+  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - rails t 
 
-test:
-  script:
-  - bundler version
-  - rails t
+
 deploy: 
   type: deploy  
   environment: production 
