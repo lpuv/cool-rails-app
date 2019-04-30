@@ -9,6 +9,9 @@ gem 'rails', '~> 5.2.3'
 #gem 'therubyracer'
 gem 'execjs'
 
+# For secure passwords
+gem 'bcrypt'
+
 gem 'guard'
 gem 'guard-minitest'
 gem 'rails-controller-testing'
