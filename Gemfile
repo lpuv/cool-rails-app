@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.3'
 #gem 'therubyracer'
 gem 'execjs'
 
+gem "sentry-raven"
+
 # For secure passwords
 gem 'bcrypt'
 
