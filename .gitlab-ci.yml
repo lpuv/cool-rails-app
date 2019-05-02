@@ -2,7 +2,7 @@ image: ruby:2.6.1
 
 include:
   #template: Dependency-Scanning.gitlab-ci.yml
-  #template: SAST.gitlab-ci.yml
+  template: SAST.gitlab-ci.yml
   template: DAST.gitlab-ci.yml
 
 variables:
