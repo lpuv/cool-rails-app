@@ -2,17 +2,17 @@ image: ruby:2.6.1
 
 include:
   #template: Dependency-Scanning.gitlab-ci.yml
-  template: SAST.gitlab-ci.yml
+  #template: SAST.gitlab-ci.yml
   template: DAST.gitlab-ci.yml
 
 variables:
   DAST_WEBSITE: https://cool-rails-app.herokuapp.com
 
 
-stages:
-  - install
-  - test
-  - deploy
+# stages:
+#   - install
+#   - test
+#   - deploy
 
 cache:
   paths:
