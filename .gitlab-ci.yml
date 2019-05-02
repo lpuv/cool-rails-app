@@ -6,7 +6,7 @@ include:
   template: DAST.gitlab-ci.yml
 
 variables:
-  DAST_WEBSITE: https://example.com
+  DAST_WEBSITE: https://cool-rails-app.herokuapp.com
 
 
 stages:
