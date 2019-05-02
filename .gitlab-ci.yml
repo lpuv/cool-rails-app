@@ -13,16 +13,17 @@ cache:
   paths:
   - vendor/ruby
 
-before_script:
+
+
+install-test:
+  script:
+  before_script:
   #- ruby -v # Print out ruby version for debugging  
   # Uncomment next line if your rails app needs a JS runtime: 
   - apt-get update -q && apt-get install nodejs -yqq  
   - apt-get install libpq-dev -yqq  
   - gem update --system 
-  - gem install bundler
-
-install-test:
-  script: 
+  - gem install bundler 
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
@@ -34,5 +35,12 @@ deploy:
   type: deploy  
   environment: production 
   script: 
+  before_script:
+  #- ruby -v # Print out ruby version for debugging  
+  # Uncomment next line if your rails app needs a JS runtime: 
+  - apt-get update -q && apt-get install nodejs -yqq  
+  - apt-get install libpq-dev -yqq  
+  - gem update --system 
+  - gem install bundler
   - gem install dpl 
   - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
