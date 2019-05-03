@@ -11,6 +11,9 @@ gem 'execjs'
 
 gem "sentry-raven"
 
+gem 'jquery-rails'
+gem 'rails-ujs'
+
 # For secure passwords
 gem 'bcrypt'
 
