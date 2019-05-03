@@ -13,6 +13,9 @@ gem "sentry-raven"
 
 gem 'jquery-rails'
 gem 'rails-ujs'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # For secure passwords
 gem 'bcrypt'
