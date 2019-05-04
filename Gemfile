@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 
 #gem 'therubyracer'
 gem 'execjs'
-
+gem 'sendgrid-ruby'
 gem "sentry-raven"
 
 gem 'jquery-rails'
