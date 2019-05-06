@@ -17,6 +17,7 @@ variables:
 cache:
   paths:
   - vendor/ruby
+  - vendor/bundle
 
 
 
