@@ -32,7 +32,7 @@ install-test:
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment  # Install dependencies into ./vendor/ruby
   - rails t 
 
 
