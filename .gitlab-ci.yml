@@ -17,7 +17,7 @@ variables:
 cache:
   paths:
   - vendor/ruby
-  - vendor/bundle
+
 
 
 install-test:
@@ -32,7 +32,7 @@ install-test:
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
-  - bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment  # Install dependencies into ./vendor/bundle
+  - bundle install --without production -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
   - rails db:migrate RAILS_ENV=test
   - rails t 
 
