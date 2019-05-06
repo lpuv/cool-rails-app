@@ -32,7 +32,8 @@ install-test:
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
-  - bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment  # Install dependencies into ./vendor/ruby
+  - bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment  # Install dependencies into ./vendor/bundle
+  - rails db:migrate RAILS_ENV=test
   - rails t 
 
 
