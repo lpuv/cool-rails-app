@@ -3,7 +3,7 @@ image: ruby:2.6.1
 include:
   #template: Dependency-Scanning.gitlab-ci.yml
   template: SAST.gitlab-ci.yml
-  template: DAST.gitlab-ci.yml
+  #template: DAST.gitlab-ci.yml
 
 variables:
   DAST_WEBSITE: https://cool-rails-app.herokuapp.com
@@ -32,7 +32,8 @@ install-test:
   - gem install rails 
   - rm -rf Gemfile.lock 
   - bundle update 
-  - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - bundle install --without production -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
+  - rails db:migrate RAILS_ENV=test
   - rails t 
 
 
