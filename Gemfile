@@ -7,6 +7,7 @@ ruby '2.6.1'
 gem 'rails', '~> 5.2.3'
 
 #gem 'therubyracer'
+gem 'codecov', :require => false, :group => :test
 gem 'execjs'
 gem 'sendgrid-ruby'
 gem "sentry-raven"

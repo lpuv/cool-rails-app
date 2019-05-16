@@ -13,6 +13,7 @@ module CoolRailsApp
     Raven.configure do |config|
       config.dsn = 'https://240c60401a1d494f8ab6a474191d98f9:d5a8fccbb22c43689c9e1fc1b40f424a@sentry.io/1450743'
     end
+    Rails.configuration.CODECOV_TOKEN = '5b133954-0a11-4bd5-9019-64dc164400cf'
     # in your application.rb:
     config.filter_parameters << :password
 
