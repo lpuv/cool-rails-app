@@ -5,5 +5,6 @@ before_install:
 - gem update --system	
 - gem install bundler	
 - gem install rails	
-- rm -rf Gemfile.lock	
+- rm -rf Gemfile.lock
+- export CODECOV_TOKEN=5b133954-0a11-4bd5-9019-64dc164400cf	
 - bundle update	 
