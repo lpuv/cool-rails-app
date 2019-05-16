@@ -110,9 +110,8 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
-    jbuilder (2.8.0)
+    jbuilder (2.9.1)
       activesupport (>= 4.2.0)
-      multi_json (>= 1.2)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -143,7 +142,6 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.2.10)
-    multi_json (1.13.1)
     multipart-post (2.1.1)
     mustermann (1.0.3)
     nenv (0.3.0)
