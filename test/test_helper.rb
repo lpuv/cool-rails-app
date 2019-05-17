@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require 'simplecov'
 SimpleCov.start
@@ -6,9 +7,9 @@ require 'codecov'
 SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 require 'rails/test_help'
-require "minitest/reporters"
+require 'minitest/reporters'
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
@@ -24,10 +25,6 @@ class ActiveSupport::TestCase
   def log_in_as(user)
     session[:user_id] = user.id
   end
-
-
-
-
 
   # Log in as a particular user.
   def log_in_as(user, password: 'password', remember_me: '1')

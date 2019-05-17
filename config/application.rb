@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -16,8 +18,6 @@ module CoolRailsApp
     Rails.configuration.CODECOV_TOKEN = '5b133954-0a11-4bd5-9019-64dc164400cf'
     # in your application.rb:
     config.filter_parameters << :password
-
-
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

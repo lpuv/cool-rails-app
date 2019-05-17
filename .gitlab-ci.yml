@@ -1,7 +1,7 @@
 image: ruby:2.6.1
 
 include:
-  #template: Dependency-Scanning.gitlab-ci.yml
+  - template: Dependency-Scanning.gitlab-ci.yml
   - template: SAST.gitlab-ci.yml
   - template: DAST.gitlab-ci.yml
   - template: Code-Quality.gitlab-ci.yml
@@ -19,6 +19,10 @@ cache:
   paths:
   - vendor/ruby
 
+
+rubocop:
+  script:
+  - bundle exec rubocop
 
 
 install-test:
