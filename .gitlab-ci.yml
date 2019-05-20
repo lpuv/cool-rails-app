@@ -10,10 +10,10 @@ variables:
   DAST_WEBSITE: https://cool-rails-app.herokuapp.com
 
 
-# stages:
-#   - install
-#   - test
-#   - deploy
+stages:
+   - test
+   - codequality
+   - deploy
 
 cache:
   paths:
@@ -21,6 +21,7 @@ cache:
 
 
 rubocop:
+  type: codequality
   script:
   - gem install rubocop
   - gem update --system
@@ -30,6 +31,7 @@ rubocop:
 
 
 install-test:
+  type: test
   script:
   
   #- ruby -v # Print out ruby version for debugging  
