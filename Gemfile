@@ -14,6 +14,8 @@ gem 'execjs'
 gem 'sendgrid-ruby'
 gem 'sentry-raven'
 
+gem 'traceroute'
+
 gem 'bootstrap-will_paginate'
 gem 'faker'
 gem 'jquery-rails'
