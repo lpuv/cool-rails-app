@@ -19,12 +19,14 @@ gem 'faker'
 gem 'jquery-rails'
 gem 'rails-ujs'
 gem 'will_paginate'
+gem 'devise'
 
 gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 # For secure passwords
 gem 'bcrypt'
 gem "recaptcha", require: "recaptcha/rails"
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem 'guard'
 gem 'guard-minitest'
 gem 'rails-controller-testing'
