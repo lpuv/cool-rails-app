@@ -25,6 +25,7 @@ rubocop:
   - gem install rubocop
   - gem update --system
   - gem install bundler
+  - bundle install --without production
   - bundle exec rubocop
 
 
