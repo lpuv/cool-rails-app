@@ -9,7 +9,6 @@ include:
 variables:
   DAST_WEBSITE: https://cool-rails-app.herokuapp.com
 
-
 stages:
    - test
    - codequality
