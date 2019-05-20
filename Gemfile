@@ -21,7 +21,7 @@ gem 'rails-ujs'
 gem 'will_paginate'
 
 gem 'rubocop', require: false
-
+gem 'rubocop-performance', require: false
 # For secure passwords
 gem 'bcrypt'
 
