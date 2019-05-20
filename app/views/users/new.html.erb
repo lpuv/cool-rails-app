@@ -17,19 +17,7 @@
 		<%= f.label :password_confirmation, "Confirmation" %>
 		<%= f.password_field :password_confirmation , class: "form-control"%>
 
-		<div id="recaptcha"></div>
-
-		<%=javascript_tag do %>
-  			var onRecaptchaElementLoad = function() {
-    			grecaptcha.render('recaptcha', {
-      				'sitekey' : '<%= j ENV["REACAPTCHA_SITE_KEY"]%>',
-      			'hl': '<%= j locale %>',
-      			'theme': 'dark'
-    			});
-  			};
-		<%end%>
-
-		<script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaElementLoad&render=explicit' async defer></script>
+		<%= recaptcha_tags %>
 
 		<%= f.submit "Create account", class: "btn btn-primary" %>
 		<% end %>
