@@ -23,6 +23,8 @@ cache:
 rubocop:
   script:
   - gem install rubocop
+  - gem update --system
+  - gem install bundler
   - bundle exec rubocop
 
 
