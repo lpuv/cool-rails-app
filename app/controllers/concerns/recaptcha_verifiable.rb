@@ -4,7 +4,7 @@ module RecaptchaVerifiable
   extend ActiveSupport::Concern
 
   included do
-    before_filter :recaptcha, only: [:create]
+    before_action :recaptcha, only: [:create]
   end
 
   def recaptcha
