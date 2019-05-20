@@ -24,7 +24,7 @@ gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 # For secure passwords
 gem 'bcrypt'
-
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'guard'
 gem 'guard-minitest'
 gem 'rails-controller-testing'
