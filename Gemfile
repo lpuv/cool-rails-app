@@ -22,7 +22,7 @@ gem 'faker'
 gem 'jquery-rails'
 gem 'rails-ujs'
 gem 'will_paginate'
-gem 'devise'
+
 
 gem 'rubocop', require: false
 gem 'rubocop-performance', require: false

@@ -42,17 +42,7 @@ fasterer:
     - bundle --without production
     - fasterer
 
-rubyc:
-  type: analyze
-  script:
-    - gem update --system
-    - gem install bundler
-    - bundle --without production
-    - bundle exec rubycritic
-  artifacts:
-    paths:
-    - ./tmp/rubycritic/overview.html
-    expire_in: 1 week
+
 
 
 
