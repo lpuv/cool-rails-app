@@ -33,14 +33,14 @@ brakeman:
     - brakeman.html
     expire_in: 1 week
 
-flog:
+fasterer:
   type: analyze
   script:
-    - gem install flog
+    - gem install fasterer
     - gem update --system
     - gem install bundler
     - bundle --without production
-    - flog -g .
+    - fasterer
 
 
 #rubocop:
