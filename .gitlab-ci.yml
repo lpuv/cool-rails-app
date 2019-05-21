@@ -48,7 +48,11 @@ rubyc:
     - gem update --system
     - gem install bundler
     - bundle --without production
-    - rubycritic
+    - bundle exec rubycritic
+  artifacts:
+    paths:
+    - ./tmp/rubycritic/overview.html
+    expire_in: 1 week
 
 
 
