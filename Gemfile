@@ -15,6 +15,7 @@ gem 'sendgrid-ruby'
 gem 'sentry-raven'
 
 gem 'traceroute'
+gem "rubycritic", require: false
 
 gem 'bootstrap-will_paginate'
 gem 'faker'
