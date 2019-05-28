@@ -28,8 +28,12 @@ jobs:
           key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
 
       - run:
-          name: Bundle Install
-          command: gem install rails || bundle check || bundle install
+          name: Install rails
+          command: gem install rails
+          
+      - run:
+          name: Bundle install
+          command: bundle install
 
       # Store bundle cache
       - save_cache:
