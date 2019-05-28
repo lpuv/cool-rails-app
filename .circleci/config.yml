@@ -32,15 +32,15 @@ jobs:
           command: gem install rails
           
       - run:
-          name: Bundle install
-          command: bundle install
+          name: Bundle install and tests
+          command: bundle install && rails t
 
       # Store bundle cache
       - save_cache:
           key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run:
-          name: Run tests
-          command: |
-            bundle exec rails test
+#       - run:
+#           name: Run tests
+#           command: |
+#             bundle exec rails test
