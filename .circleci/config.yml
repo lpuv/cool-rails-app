@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/cool-rails-app
     docker:
-      - image: airdock/rvm  # language image
+      - image: ruby:2.6.3  # language image
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -19,9 +19,9 @@ jobs:
     steps:
       - checkout
       
-      - run:
-          name: Install Ruby
-          command: rvm install 2.6.3 && rvm use 2.6.3 --default
+#       - run:
+#           name: Install Ruby
+#           command: rvm install 2.6.3 && rvm use 2.6.3 --default
     
       # Restore bundle cache
       - restore_cache:
