@@ -34,5 +34,7 @@ jobs:
         key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
         paths:
           - vendor/bundle
-      - run: |
-        bundle exec rails test
+      - run:
+        name: Run tests
+        command: |
+          bundle exec rails test
