@@ -21,9 +21,7 @@ jobs:
     
       # Restore bundle cache
       - restore_cache:
-        keys:
-          - cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
-          - cool-rails-app-bundle-
+        key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
 
       - run:
         name: Bundle Install
