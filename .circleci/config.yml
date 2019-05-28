@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/cool-rails-app
     docker:
-      - image: circleci/ruby:2.6.3-jessie-node  # language image
+      - image: timbru31/ruby-node:2.6.3  # language image
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
