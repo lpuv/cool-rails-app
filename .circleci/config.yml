@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/cool-rails-app
+    docker:
+      - image: ruby:2.6.3  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: postgresMaster
+          RAILS_ENV: test
+      - image: circleci/postgres:9.5-alpine  # service image
+        environment:
+          POSTGRES_USER: postgresMaster
+          POSTGRES_DB: main
+          POSTGRES_PASSWORD: ""
+    steps:
+      - checkout
+      
+#       - run:
+#           name: Install Ruby
+#           command: rvm install 2.6.3 && rvm use 2.6.3 --default
+    
+      # Restore bundle cache
+      - restore_cache:
+          key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Bundle Install
+          command: gem install rails || bundle check || bundle install
+
+      # Store bundle cache
+      - save_cache:
+          key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Run tests
+          command: |
+            bundle exec rails test
