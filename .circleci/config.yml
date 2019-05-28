@@ -19,20 +19,20 @@ jobs:
     steps:
       - checkout
     
-    # Restore bundle cache
-    - restore_cache:
+      # Restore bundle cache
+      - restore_cache:
         keys:
           - cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
           - cool-rails-app-bundle-
 
-    - run:
+      - run:
         name: Bundle Install
         command: gem install rails || bundle check || bundle install
 
-    # Store bundle cache
-    - save_cache:
+      # Store bundle cache
+      - save_cache:
         key: cool-rails-app-bundle-v2-{{ checksum "Gemfile.lock" }}
         paths:
           - vendor/bundle
-    - run: |
+      - run: |
         bundle exec rails test
