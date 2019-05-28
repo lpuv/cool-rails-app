@@ -21,7 +21,7 @@ jobs:
       
       - run:
           name: Install Ruby
-          command: rvm install 2.6.3 || rvm use 2.6.3 --default
+          command: rvm install 2.6.3 && rvm use 2.6.3 --default
     
       # Restore bundle cache
       - restore_cache:
