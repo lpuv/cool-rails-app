@@ -75,7 +75,8 @@ install-test:
 
 
 deploy: 
-  type: deploy  
+  type: deploy
+  when: manual  
   environment: production 
   script: 
   
