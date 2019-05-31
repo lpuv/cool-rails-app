@@ -28,13 +28,10 @@ run:triage:triage:
     - gitlab-triage --token $API_TOKEN --source-id $CI_PROJECT_PATH
 
 brakeman:
+  image: docker
   type: analyze
   script:
-    - gem install brakeman
-    - gem update --system
-    - gem install bundler
-    - bundle --without production
-    - brakeman -o brakeman.html
+    - docker run -v "$(pwd)" presidentbeef/brakeman -o brakeman.html
   artifacts:
     paths:
     - brakeman.html
