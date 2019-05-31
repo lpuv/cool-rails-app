@@ -26,6 +26,8 @@ run:triage:triage:
   script:
     - gem install gitlab-triage
     - gitlab-triage --token $API_TOKEN --source-id $CI_PROJECT_PATH
+  only:
+    - schedules
 
 brakeman:
   image: docker
