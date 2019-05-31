@@ -12,6 +12,7 @@ variables:
 stages:
    - test
    - analyze
+   - triage
    - deploy
    - dast
 
@@ -19,6 +20,12 @@ cache:
   paths:
   - vendor/ruby
 
+
+run:triage:triage:
+  stage: triage
+  script:
+    - gem install gitlab-triage
+    - gitlab-triage --token $API_TOKEN --source-id $CI_PROJECT_PATH
 
 brakeman:
   type: analyze
