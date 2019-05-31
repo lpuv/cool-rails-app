@@ -82,7 +82,7 @@ install-test:
 
 
 deploy: 
-  type: deploy  
+  type: deploy
   environment: production 
   script: 
   
