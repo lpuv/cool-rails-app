@@ -68,7 +68,7 @@ install-test:
   
   #- ruby -v # Print out ruby version for debugging  
   # Uncomment next line if your rails app needs a JS runtime: 
-  - if [[ -z "$NO_INSTALL" ]] then exit 0; fi
+  - if [[ -z "$NO_INSTALL" ]]; then exit 0; fi
   - apt-get update -q && apt-get install nodejs -yqq  
   - apt-get install libpq-dev -yqq  
   - gem update --system 
