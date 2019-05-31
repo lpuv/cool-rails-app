@@ -33,7 +33,7 @@ brakeman:
   image: docker
   type: analyze
   script:
-    - docker run -v "$(pwd)" presidentbeef/brakeman -o brakeman.html
+    - docker run -v "$(pwd)"/code presidentbeef/brakeman -o brakeman.html
   artifacts:
     paths:
     - brakeman.html
@@ -68,6 +68,7 @@ install-test:
   
   #- ruby -v # Print out ruby version for debugging  
   # Uncomment next line if your rails app needs a JS runtime: 
+  - [[ -z "$NO_INSTALL" ]] && exit 0
   - apt-get update -q && apt-get install nodejs -yqq  
   - apt-get install libpq-dev -yqq  
   - gem update --system 
