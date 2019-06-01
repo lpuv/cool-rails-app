@@ -1,5 +1,8 @@
 image: ruby:2.6.3
 
+services:
+  - docker:dind
+
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
   - template: SAST.gitlab-ci.yml
@@ -26,14 +29,13 @@ run:triage:triage:
   script:
     - gem install gitlab-triage
     - gitlab-triage --token $API_TOKEN --source-id $CI_PROJECT_PATH
-  only:
-    - schedules
+  only: manual
 
 brakeman:
   image: docker
   type: analyze
   script:
-    - docker run -v "$(pwd)"/code presidentbeef/brakeman -o brakeman.html
+    - docker run -v "$(pwd)" presidentbeef/brakeman -o brakeman.html
   artifacts:
     paths:
     - brakeman.html
