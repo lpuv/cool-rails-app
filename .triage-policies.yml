@@ -6,7 +6,7 @@ resource_rules:
           date:
             attribute: created_at
             condition: older_than
-            interval_type: week
+            interval_type: weeks
             interval: 1
           labels:
             - No label
