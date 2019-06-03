@@ -31,20 +31,24 @@ run:triage:triage:
     - gitlab-triage --token $API_TOKEN --source-id $CI_PROJECT_PATH
   when: manual
 
-# brakeman:
-#   image: docker
-#   type: analyze
-#   script:
-#     - docker run -v "$(pwd)" presidentbeef/brakeman -o brakeman.html
-#   artifacts:
-#     paths:
-#     - brakeman.html
-#     expire_in: 1 week
+brakeman:
+  type: analyze
+  script:
+    - gem install brakeman
+    - gem update --system
+    - gem install bundler
+    - bundle --without production
+    - brakeman -o brakeman.html
+  artifacts:
+    paths:
+    - brakeman.html
+    expire_in: 1 week
 
 fasterer:
   type: analyze
   script:
     - gem install fasterer
+    - gem install rails
     - gem update --system
     - gem install bundler
     - bundle --without production
