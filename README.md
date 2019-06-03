@@ -3,7 +3,6 @@
 [![Depfu](https://badges.depfu.com/badges/aa8b61d5da705637820b35585ef3929d/count.svg)](https://depfu.com/github/gamer4life1/cool-rails-app?project_id=7917)
 [![Build Status](https://travis-ci.com/gamer4life1/cool-rails-app.svg?branch=master)](https://travis-ci.com/gamer4life1/cool-rails-app)
 
-
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
