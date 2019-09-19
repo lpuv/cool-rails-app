@@ -316,7 +316,7 @@ GEM
     traceroute (0.8.0)
       rails (>= 3.0.0)
     tty-which (0.4.1)
-    turbolinks (5.2.0)
+    turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (1.2.5)
