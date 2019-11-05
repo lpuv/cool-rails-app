@@ -80,7 +80,7 @@ GEM
       nokogiri (~> 1.8)
     codeclimate-engine-rb (0.4.1)
       virtus (~> 1.0)
-    codecov (0.1.15)
+    codecov (0.1.16)
       json
       simplecov
       url
