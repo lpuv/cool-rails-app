@@ -35,7 +35,7 @@ gem 'guard-minitest'
 gem 'rails-controller-testing'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3.0'
 # Use SCSS for stylesheets
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
