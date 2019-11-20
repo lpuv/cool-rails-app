@@ -111,7 +111,7 @@ GEM
       i18n (>= 1.6, < 1.8)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.1)
+    ffi (1.11.2)
     flay (2.12.1)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
@@ -153,10 +153,9 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     libv8 (7.3.492.27.1)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
+    listen (3.2.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -254,7 +253,6 @@ GEM
     rubocop-performance (1.5.1)
       rubocop (>= 0.71.0)
     ruby-progressbar (1.10.1)
-    ruby_dep (1.5.0)
     ruby_http_client (3.3.0)
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
@@ -363,7 +361,7 @@ DEPENDENCIES
   guard-minitest
   jbuilder (~> 2.5)
   jquery-rails
-  listen (>= 3.0.5, < 3.2)
+  listen (>= 3.0.5, < 3.3)
   mini_racer
   minitest
   minitest-reporters
