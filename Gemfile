@@ -6,16 +6,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.2'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 
 # gem 'therubyracer'
-gem 'codecov', require: false, group: :test
+gem 'codecov', '>= 0.1.16', require: false, group: :test
 gem 'execjs'
 gem 'sendgrid-ruby'
 gem 'sentry-raven'
 
 gem 'traceroute', '>= 0.8.0'
-gem "rubycritic", require: false
+gem "rubycritic", ">= 4.2.2", require: false
 
 gem 'bootstrap-will_paginate'
 gem 'faker'
@@ -28,7 +28,7 @@ gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 # For secure passwords
 gem 'bcrypt'
-gem "recaptcha", require: "recaptcha/rails"
+gem "recaptcha", "5.2.1"
 gem 'dotenv-rails', '>= 2.7.5'
 gem 'guard'
 gem 'guard-minitest'
@@ -78,7 +78,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.3'
-  gem 'web-console', '>= 3.7.0'
+  gem 'web-console', '>= 4.0.1'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
