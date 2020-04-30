@@ -9,13 +9,13 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.2'
 
 # gem 'therubyracer'
-gem 'codecov', require: false, group: :test
+gem 'codecov', '>= 0.1.16', require: false, group: :test
 gem 'execjs'
 gem 'sendgrid-ruby'
 gem 'sentry-raven'
 
 gem 'traceroute', '>= 0.8.0'
-gem "rubycritic", require: false
+gem "rubycritic", ">= 4.2.2", require: false
 
 gem 'bootstrap-will_paginate'
 gem 'faker'
@@ -28,7 +28,7 @@ gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 # For secure passwords
 gem 'bcrypt'
-gem "recaptcha", require: "recaptcha/rails"
+gem "recaptcha", "5.2.1"
 gem 'dotenv-rails', '>= 2.7.5'
 gem 'guard'
 gem 'guard-minitest'
