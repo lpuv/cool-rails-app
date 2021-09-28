@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 # gem 'therubyracer'
 gem 'codecov', require: false, group: :test
@@ -89,7 +89,7 @@ group :test do
   gem 'capybara', '>= 3.29.0'
   gem 'selenium-webdriver', '>= 3.142.4'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'chromedriver-helper', '>= 2.1.1'
 end
 
 group :production do
