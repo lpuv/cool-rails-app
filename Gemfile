@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'rails', '~> 6.0.4', '>= 6.0.4.6'
 
 # gem 'therubyracer'
 gem 'codecov', require: false, group: :test
@@ -35,7 +35,7 @@ gem 'guard-minitest'
 gem 'rails-controller-testing', '>= 1.0.4'
 
 # Use Puma as the app server
-gem 'puma', '~> 4.3.0'
+gem 'puma', '~> 4.3.11'
 # Use SCSS for stylesheets
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
